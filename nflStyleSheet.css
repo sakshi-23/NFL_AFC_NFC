@@ -1,0 +1,465 @@
+/*GENERAL WRAP-UPS*/
+
+body {
+    background-color: #F6F6F6;
+    background: #2B2B2B;
+    color: #ddd;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: normal;
+}
+#header {
+    margin-bottom: 20px;
+    color: #F6F6F6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #2B2B2B;
+    z-index: 100;
+}
+
+hr{
+
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    margin-bottom: 0;
+}
+
+
+
+h1{
+        font-family: "Montserrat", Arial, sans-serif;
+        /* color: black; */
+        font-weight: normal;
+        margin: 10px;
+        float: left;
+}
+text{
+    font-weight: normal;
+}
+
+
+/*SVG*/
+.left-align{
+    float:left;
+    width: 49%;
+    overflow: auto;
+    border-right: 1px solid #4F4F4F;
+    border-left: 1px solid #4F4F4F;
+}
+.scrollBox {
+    width: 100%;
+    overflow: auto;
+    cursor: default;
+}
+
+/*PLAYER INFORMATION*/
+#clickProf {
+    flex: 1;
+    margin-left: 930px;
+}
+
+#clickProf img {
+    height: 150px;
+    width: auto;
+    border: 2px solid gray;
+}
+
+/*LOGOS*/
+.select_style {
+    display: inline-block;
+    width: 49%;
+}
+
+/*GRAPH LABELS*/
+.domain {
+    display: none;
+}
+.yAxis {
+/*    font-size: 10px;*/
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.xAxis {
+/*    font-size: 10px;*/
+    font-family: sans-serif;
+    font-weight: bold;
+    fill: aliceblue;
+}
+.positionLabel {
+    border: none;
+    fill: black;
+    font-size: 12px;
+}
+.domain {
+    display: none;
+}
+
+/*PREVIEW*/
+text {
+    pointer-events: none;
+}
+.previewWrap {
+    position:absolute;
+    border: 1px solid #555;
+    background:#333;
+    padding:5px;
+    //
+    display:none;
+    color:#fff;
+    box-shadow: 2px 1px 3px rgba(103, 115, 130, 1);
+    opacity: 0.9;
+    font-size: 13px;
+}
+
+/*CIRCLES*/
+/*STATUS COLORS*/
+
+circle{
+    cursor:pointer;
+}
+.gone{
+     fill: #FF3838;
+    opacity: 0.8;
+}
+
+.act {
+    fill: #89f789;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+.sus {
+    fill: #FFEB3B;
+    opacity: 0.8;
+}
+.udf {
+    fill: grey;
+    opacity: 0.8;
+}
+.other_team {
+    fill: #778eff;
+    opacity: 0.8;
+}
+.other {
+    fill: gold;
+    opacity: 0.8;
+}
+
+/*CLICK PROFILE*/
+/*TABLE*/
+table {
+    width: 255px;
+    height: 540px;
+    border: 1px solid #6d6d6d;
+    background: #262525;
+    /* line-height: 1.2em; */
+}
+
+.heading {
+    font-size: 15px;
+    text-align: center;
+    background: #6f6f6f;
+    color: white;
+     line-height: 25px;
+    opacity: 0.9;
+}
+
+.infoHeading {
+    font-size: 14px;
+    text-align: center;
+/*    width: 40%;*/
+}
+.infoHeading td {
+    font-size: 14px;
+}
+.nameCap {
+    line-height: initial;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 0.2em;
+}
+
+/*
+span{
+        font-size: 10px;
+    display: -webkit-box;
+}
+*/
+
+.team-info span {
+   font-size: 10px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 75px;
+    width: 65px;
+    overflow: hidden;
+    cursor: default;
+
+}
+
+/* TEAMS PREVIEW*/
+.team-info {
+    width: 1260px;
+    margin: auto 0;
+    display: flex;
+    position: absolute;
+}
+
+.team-info circle {
+    stroke-width: 1px;
+}
+#NFC {
+    margin-top: 120px;
+}
+.teamDiv {
+    height: 100px;
+    cursor: pointer;
+}
+
+#selectedBorder {
+    width: 1260px;
+    height: 250px;
+}
+#selectedBorder rect {
+    fill: none;
+    stroke: #fff689;
+}
+
+/* TEAM DETAILED VIEW */
+.selectedSvg{
+/*    margin-left: 2%;*/
+/*    width: 40%;*/
+    transition: all 0.5s ease;
+}
+#SvgHolder {
+    display: flex;
+    margin-left: 0%;
+    position: absolute;
+    margin-top: 210px;
+    transition: all 0.8s ease;
+}
+
+.teamDiv svg{
+    margin-right: -15px;
+
+}
+
+#instruction {
+    /* width: 390px; */
+    /* float: right; */
+    display: flex;
+    right: 30px;
+    top: 30px;
+    position: absolute;
+    font-size: 13px;
+    color: #8f8f8f;
+}
+
+
+.footer a{
+    color: #3c7bca;
+}
+
+.text-muted{
+        background: #3e3e3e;
+        display: inline-block;
+        padding: 5px;
+        width: 100%;
+        font-size: 12px;
+}
+
+/*LOGOS*/
+.teamTitle {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 220px;
+    margin-right: 10px;
+        text-align: center;
+}
+
+#teamLogo {
+    width: 100px;
+    margin-top: 120px;
+    opacity: .9;
+    /* margin: 0 auto; */
+}
+#teamName {
+    font-size: 25px;
+/*
+    margin-left: 25%;
+    margin-top: -10%;
+*/
+}
+
+
+/*LEGEND*/
+#legend{
+    float: left;
+    /* position: absolute; */
+    /* left: 650px; */
+    right: 100px;
+    /* top: 10px; */
+    fill: white;
+    font-size:14px;
+    margin-left: 25px;
+}
+.inputs{
+        position: absolute;
+        right: 200px;
+        z-index: 10000;
+        font-size: 12px;
+}
+
+.inputs label {
+    display: block;
+}
+
+.one{fill: rgb(255, 229, 191);}
+.two{fill: #ffc269;}
+.three{fill: #e18a0a;}
+ .four{fill: #e14412;}
+ .five{fill: #972704;}
+
+.noinfo{fill: #878787;}
+
+
+.unselected{
+fill:#424343!important;
+}
+
+
+.year{
+
+position: absolute;
+
+top: 80px;
+
+left: 15px;
+
+font-size: 10px;
+
+color: gray;
+}
+
+.round{
+       position: absolute;
+    top: 60px;
+    left: 70px;
+    font-size: 10px;
+    color: gray;
+}
+
+.axis-info{
+    border-left: 1px solid;
+    border-top: 1px solid white;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 33px;
+}
+
+/*Help Tip*/
+/*http://tutorialzine.com/2014/07/css-inline-help-tips/*/
+.help-tip{
+	position: absolute;
+	top: 8px;
+	right: 35px;
+	text-align: center;
+	background-color: #6a6a6a;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	font-size: 13px;
+	line-height: 26px;
+	cursor: default;
+	z-index: 1000000;
+}
+
+.help-tip:before{
+	content:'?';
+	font-weight: bold;
+	color:#cecece;
+    opacity: 0.8;
+}
+
+.help-tip:hover div {
+	display:block;
+	transform-origin: 100% 0%;
+
+	-webkit-animation: fadeIn 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip div{	/* The tooltip */
+	display: none;
+	text-align: left;
+	background-color: ##494949;
+	padding: 10px;
+	width: 300px;
+	position: absolute;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	right: -4px;
+	color: #fffbd9;
+	font-size: 13px;
+	line-height: 1.4;
+	background: #434343;
+	border: 1px solid #575757;
+	z-index: 100000;
+}
+
+.help-tip div:before{ /* The pointer of the tooltip */
+	position: absolute;
+	content: '';
+	width:0;
+	height: 0;
+	border:6px solid transparent;
+	border-bottom-color: #6c6c6c;
+	right:10px;
+	top:-12px;
+}
+
+.help-tip div:after{ /* Prevents the tooltip from being hidden */
+	width:100%;
+	height:40px;
+	content:'';
+	position: absolute;
+	top:-40px;
+	left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity:0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity:100%;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:100%; }
+}
+
+.content{
+
+/* float: left; */
+
+/* margin-left: 20px; */
+
+height: 900px;
+
+/* margin-top: 50px; */
+
+width: 100%;
+
+margin: 65px 5px;
+}

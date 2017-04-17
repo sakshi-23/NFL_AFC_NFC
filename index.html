@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title> NFL Draft</title>
+    <script src="jquery-1.12.2.min.js"></script>
+<!--    <script src="jquery-migrate-1.2.1.min.js"></script>-->
+    <link href="nflStyleSheet.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="jquery.ddslick.min.js"></script>
+    <script src = "d3.min.js"></script>
+    <script src = "nfl.js"></script>
+</head>
+<body>
+    <div>
+    <div id = "header">
+        <div class="inputs">
+            <label title="Current status of players"><input checked="checked" value="status" name="playercolor" type="radio">Player Status</label>
+            <label title="Number of times the (offensive or defensive) player was picked as a game starter (As calculated from http://www.pro-football-reference.com/)"><input value="GamesStarted" name="playercolor" type="radio">Games Started</label>
+            <label title="Single score value assigned to the player (As calculated from http://www.pro-football-reference.com/)"><input value="ApproxValue" name="playercolor" type="radio">Approximate Value</label>
+        </div>
+        <div class="help-tip">
+            <div>
+                <h4 style="text-align:center;color:white">Visualization Overview</h4>
+                This visualization presents each NFL team's drafting history. For each team, the past 10 years of draft choices are shown.
+                Each circle is a player. Inside the circle is the position of the player. The circles are colored using that player's value for the selected mode - Player Status, Approximate Value and Games Started.
+                <ul>
+                    <li>Clicking on the mini version of any team's draft history displays the team's history details in space below</li>
+                    <li>For basic player information, mouse-over the circles in the detailed draft view. </li>
+                    <li>To see complete information about a player, click on the player circle in the detailed draft view </li>
+                    <li>For more information about the three modes, hover over the names of the modes.</li>
+                </ul>
+            </div>
+
+        </div>
+        <h1>NFL Draft</h1>
+    <div id="legend"></div>
+
+    <div id = "positionCheck"></div>
+    <hr style="width: 100%;">
+    </div>
+
+
+    <div  class="content">
+        <div class="year">Years</div>
+         <div class="round">Rounds</div>
+        <div class="axis-info"></div>
+        <div class="team-info" style="margin-top:10px;" id="AFC"><div style="margin-top: 30px;">AFC</div></div>
+        <div class="team-info" id="NFC"><div style="margin-top: 30px;">NFC</div></div>
+    </div>
+ <!--<hr style="width: 100%;">-->
+
+    <div class="footer">
+    <div class="text-muted">
+        <div>
+            Created by:
+            <a href="//github.com/bbjelly">Sally Kim</a>,
+             <a href="//sakshi-23.github.io">Sakshi Pratap</a>,
+             <a href="http://www.cc.gatech.edu/~stasko/">John Stasko</a>
+        </div>
+        <div>
+            Approximate Values and Games Started are provided by <a href="http://www.pro-football-reference.com/"> http://www.pro-football-reference.com/</a>
+
+        </div>
+    </div>
+
+</div>
+        </div>
+</body>

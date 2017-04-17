@@ -1,0 +1,340 @@
+/*GENERAL WRAP-UPS*/
+
+body {
+  background-color: #F6F6F6;
+    background: #fdfdfd;
+    color: #1f1d1d;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: normal;
+}
+#header {
+    margin-bottom: 10px;
+    color: #656565;
+    margin-left: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fdfdfd;
+    z-index: 100;
+}
+
+hr{
+
+    margin-bottom:0;
+}
+
+
+
+h1{
+        font-family: "Montserrat", Arial, sans-serif;
+    /* color: black; */
+    font-weight: normal;
+        margin: 10px;
+}
+text{
+    fill: #939393;
+    font-weight: normal;
+}
+
+
+/*SVG*/
+.left-align{
+    float:left;
+    width: 49%;
+    overflow: auto;
+    border-right: 1px solid #4F4F4F;
+    border-left: 1px solid #4F4F4F;
+}
+.scrollBox {
+    width: 100%;
+    overflow: auto;
+    cursor: default;
+}
+
+/*PLAYER INFORMATION*/
+#clickProf {
+    flex: 1;
+    margin-left: 930px;
+}
+
+#clickProf img {
+    height: 150px;
+    width: auto;
+}
+
+/*LOGOS*/
+.select_style {
+    display: inline-block;
+    width: 49%;
+}
+
+/*GRAPH LABELS*/
+.domain {
+    display: none;
+}
+.yAxis {
+/*    font-size: 10px;*/
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.xAxis {
+/*    font-size: 10px;*/
+    font-family: sans-serif;
+    font-weight: bold;
+    fill: aliceblue;
+}
+.positionLabel {
+    border: none;
+    fill: black;
+    font-size: 12px;
+}
+.domain {
+    display: none;
+}
+
+/*PREVIEW*/
+text {
+    pointer-events: none;
+}
+.previewWrap {
+    position:absolute;
+    border:3px solid #ccc;
+    background:#333;
+    padding:5px;
+    //display:none;
+    color:#fff;
+    box-shadow: 4px 4px 3px rgba(103, 115, 130, 1);
+    opacity:0.9
+}
+
+/*CIRCLES*/
+/*STATUS COLORS*/
+
+circle{
+    cursor:pointer;
+}
+.gone{
+     fill: #ed6c6c;
+     opacity: 0.8;
+}
+
+.act {
+    fill: #00ba00;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+.sus {
+    fill: #D7D6D6;
+    opacity: 0.8;
+}
+.udf {
+    fill: grey;
+    opacity: 0.8;
+}
+.other_team {
+    fill: #3152ff;
+    opacity: 0.8;
+}
+.other {
+    fill: gold;
+    opacity: 0.8;
+}
+
+#legend{
+    float: right;
+    position: absolute;
+    /* left: 650px; */
+    right: 0;
+    top: 10px;
+    fill: white;
+    font-size:14px;
+}
+
+/*CLICK PROFILE*/
+/*TABLE*/
+table {
+    width: 255px;
+    height: 540px;
+    /* line-height: 1.2em; */
+    border: 2px solid #ebebeb;
+}
+
+.heading {
+    font-size: 15px;
+    text-align: center;
+    background: #6f6f6f;
+    color: white;
+    line-height: 25px;
+    opacity: 0.9;
+}
+
+.infoHeading {
+    font-size: 14px;
+    text-align: center;
+/*    width: 40%;*/
+}
+.infoHeading td {
+    font-size: 14px;
+}
+.nameCap {
+    line-height: initial;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 0.2em;
+}
+
+/*
+span{
+        font-size: 10px;
+    display: -webkit-box;
+}
+*/
+
+.team-info span {
+   font-size: 10px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 75px;
+    width: 65px;
+    overflow: hidden;
+    cursor: default;
+
+}
+
+/* TEAMS PREVIEW*/
+.team-info {
+    width: 1260px;
+    margin: auto 0;
+    display: flex;
+    position: absolute;
+}
+
+.team-info circle {
+    stroke-width: 1px;
+}
+#NFC {
+    margin-top: 120px;
+}
+.teamDiv {
+    height: 100px;
+    cursor: pointer;
+}
+
+#selectedBorder {
+    width: 1350px;
+    height: 250px;
+    margin-top: 30px;
+}
+#selectedBorder rect {
+    fill: none;
+    stroke: #daca00;
+    stroke-width: 2px;
+    margin-top: 12px;
+}
+
+/* TEAM DETAILED VIEW */
+.selectedSvg{
+/*    margin-left: 2%;*/
+    width: 40%;
+    transition: all 0.5s ease;
+}
+#SvgHolder {
+    display: flex;
+    margin-left: 5%;
+    position: absolute;
+    margin-top: 210px;
+    transition: all 0.8s ease;
+}
+
+.teamDiv svg{
+    margin-right: -15px;
+
+}
+
+
+.footer a{
+    color: #3c7bca;
+}
+
+.text-muted{
+        background: gray;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+
+/*LOGOS*/
+.teamTitle {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 220px;
+    margin-right: 10px;
+        text-align: center;
+}
+
+#teamLogo {
+    width: 100px;
+    margin-top: 120px;
+    opacity: .9;
+    /* margin: 0 auto; */
+}
+#teamName {
+    font-size: 25px;
+/*
+    margin-left: 25%;
+    margin-top: -10%;
+*/
+}
+
+.inputs{
+        position: absolute;
+    right: 20px;
+    font-size: 10px;
+    z-index: 10000;
+    font-size:12px;
+
+}
+
+
+
+.one{fill: rgb(217, 237, 255)}
+.two{    fill: #80b1df;}
+.three{    fill: #1c7fc0;}
+ .four{fill:#08519c}
+ .five{fill:#08306b}
+
+.noinfo{fill:#c2c2c2}
+
+
+.unselected{
+fill:#f3f3f3!important
+}
+
+
+.year{
+
+   position: absolute;
+    top: 76px;
+    left: 39px;
+    font-size: 10px;
+    color: gray;
+
+}
+
+.round{
+       position: absolute;
+    top: 60px;
+    left: 70px;
+    font-size: 10px;
+    color: gray;
+}
+
+.axis-info{
+    border-left: 1px solid;
+    border-top: 1px solid black;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 37px;
+}

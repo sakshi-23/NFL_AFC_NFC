@@ -654,7 +654,6 @@ function mouseClick(svg, mcDraft, clickProf) {
                         d3.select("#"+statKeys[0]+"Tr").append("td")
                             .text(stat[statKeys[0]]);
                     }
-                    goToByScroll(this.parentElement.parentElement.parentElement.parentElement.id, profile[0].name);
                     d.clicked = true;
                     //TODO: work for both sides
                     // highlights the circle when clicked
@@ -677,11 +676,6 @@ function mouseClick(svg, mcDraft, clickProf) {
             }
         })
     })
-}
-
-function goToByScroll(pid, id){
-    // $('html,body').animate({scrollTop: $("[id='"+id+"']").offset().top},'medium');
-    $('#'+pid).animate({scrollLeft: $("[id='"+id+"']").offset().left},'slow');
 }
 
 function checkUndefinedPlayer(playerInfo) {

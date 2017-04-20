@@ -169,6 +169,7 @@ d3.json('draftScores.json', function(data) {
 function displayFullTeamInfo(data, teamName, svgHolder, selectedSizes) {
     svgHolder.append("div")
         .attr("id", "instruction")
+        .attr("class", "highlighted")
         .text("Click on a circle to see detailed player information!")
     var svg = createSvg(svgHolder, "selectedSvg","", selectedSizes.width, selectedSizes.height);
     teamNameDiv = svgHolder.insert("div", ":first-child")
@@ -464,6 +465,7 @@ function createLegend(){
         .attr("r", 10)
         .attr("class", legendKey[colorBy].class[i])
         .on("click", function(d) {
+           
             var classSelect = this.className.baseVal.split(" ")[0];
             if (!clickedDict[classSelect] ) {
                 d3.selectAll("."+classSelect).each(function(d, i) {
@@ -509,6 +511,7 @@ function mouseClick(svg, mcDraft, clickProf) {
     svg.selectAll("g > g").each(function(d) {
         d3.select(this)
             .on("click", function(d) {
+                 d3.select("#instruction").classed("highlighted",false)
                 var profile = mcDraft.filter(function(dClick) {
                         var names = dClick.name.split(" ");
                         var name = names[1]+", "+names[0];

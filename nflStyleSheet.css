@@ -117,6 +117,7 @@ text {
 
 circle{
     cursor:pointer;
+    transition: all 0.4s ease;
 }
 .gone{
      fill: #FF3838;
@@ -126,7 +127,7 @@ circle{
 .act {
     fill: #89f789;
     opacity: 0.8;
-    transition: all 0.5s ease;
+    
 }
 .sus {
     fill: #FFEB3B;
@@ -144,6 +145,8 @@ circle{
     fill: gold;
     opacity: 0.8;
 }
+
+
 
 /*CLICK PROFILE*/
 /*TABLE*/
@@ -253,6 +256,12 @@ span{
     position: absolute;
     font-size: 13px;
     color: #8f8f8f;
+}
+
+#instruction.highlighted{
+    color: #ffff7d;
+    font-weight: 500;
+    
 }
 
 

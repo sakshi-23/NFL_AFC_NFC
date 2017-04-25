@@ -402,6 +402,13 @@ function createChart(svg, sizes) {
         positionsObject[d.year]=0
     });
 
+    
+    // PROPAGATE STATUS FILTER
+    for (var key in clickedDict) {
+        if (clickedDict[key]) {
+            d3.selectAll("."+key).classed("unselected",true);
+        }
+    }
     // For now
     var positionFunctions = {"position": position, "yPosition": yPosition};
     return positionFunctions
